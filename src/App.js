@@ -1,12 +1,15 @@
 import React from 'react';
 import Layout from "./components/Layout/Layout";
 import Feed from "./containers/Feed/Feed";
+import {Route, Switch} from "react-router";
 
 function App() {
     return (
         <div className="App">
             <Layout>
-                <Feed />
+                <Switch>
+                    <Route path="/" component={Feed} />
+                </Switch>
             </Layout>
         </div>
     );
