@@ -2,7 +2,8 @@ import React, {Component, Fragment} from 'react';
 import {connect} from "react-redux";
 import {fetchPosts} from "../../store/actions/actions";
 import PostList from "../../components/PostList/PostList";
-import Spinner from "../../components/Layout/Spinner/Spinner";
+import Spinner from "../../components/UI/Spinner/Spinner";
+import './Feed.sass';
 
 class Feed extends Component {
     componentDidMount() {
@@ -12,6 +13,7 @@ class Feed extends Component {
     render() {
         return (
             <Fragment>
+                <h1 className="main_title">Posts</h1>
                 {
                     !this.props.posts.length ?
                         <Spinner/> :
