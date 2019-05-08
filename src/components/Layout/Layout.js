@@ -5,10 +5,12 @@ const Layout = props => {
     return (
         <Fragment>
             <header className="header">
-                <Toolbar />
+                <Toolbar/>
             </header>
             <main className="content">
-                {props.children}
+                <div className="container">
+                    {props.children}
+                </div>
             </main>
         </Fragment>
     );
