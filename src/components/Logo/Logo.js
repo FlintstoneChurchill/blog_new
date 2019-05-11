@@ -1,9 +1,10 @@
 import React from 'react';
 import "./Logo.sass";
+import {Link} from "react-router-dom";
 
 const Logo = () => {
     return (
-        <a href="/" className="logo">Blog</a>
+        <Link className="logo" to="/" >Blog</Link>
     );
 };
 

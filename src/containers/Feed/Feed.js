@@ -11,16 +11,13 @@ class Feed extends Component {
     }
 
     render() {
+        if (!this.props.posts.length) return <Spinner/>;
         return (
             <Fragment>
                 <h1 className="main_title">Posts</h1>
-                {
-                    !this.props.posts.length ?
-                        <Spinner/> :
-                        <PostList
-                            posts={this.props.posts}
-                        />
-                }
+                <PostList
+                    posts={this.props.posts}
+                />
             </Fragment>
         );
     }

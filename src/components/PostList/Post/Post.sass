@@ -1,3 +1,4 @@
+@import ../../../assets/sass/mixins
 .post
   width: 30%
   padding: 20px
@@ -5,6 +6,12 @@
   border: 1px solid #ccc
   box-sizing: border-box
   color: #333
+  +tablet
+    width: 45%
+  +mobile
+    margin: 0 auto 30px
+    width: 100%
+    max-width: 400px
   &__title
     margin: 0 0 20px
     font-size: 20px

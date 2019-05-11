@@ -1,11 +1,15 @@
 import axios from "../../axios-blog";
-import {FETCH_POSTS_SUCCESS} from "./actionTypes";
+import {FETCH_POSTS_SUCCESS, FETCH_SINGLE_POST_SUCCESS} from "./actionTypes";
 
 export const fetchPostsSuccess = (posts) => {
     return {type: FETCH_POSTS_SUCCESS, posts};
 };
 export const fetchPostsError = (error) => {
     return {type: FETCH_POSTS_SUCCESS, error};
+};
+
+export const fetchSinglePostSuccess = (post) => {
+    return {type: FETCH_SINGLE_POST_SUCCESS, post};
 };
 
 export const fetchPosts = () => {

@@ -14,7 +14,11 @@ const Post = props => {
                 </Link>
             </h3>
             <p className="post__message">{props.message}</p>
-            <p className="post__author">{props.author}</p>
+            <p className="post__author">
+                <Link className="post__author_link" to={`/users/${props.id}`}>
+                    {props.author}
+                </Link>
+            </p>
         </article>
     );
 };
